@@ -1,3 +1,14 @@
+@keyframes show-bookmark {
+    from {background-size: 25px 0;}
+    to {background-size: 25px 75px;}
+}
+
+@keyframes show-title-line {
+    0% {width: 0;}
+    75% {width: 25%;}
+    100% {width: 15%;}
+}
+
 * {
     box-sizing: border-box;
 }
@@ -47,19 +58,9 @@ header {
 }
 
 nav a {
-    padding: 0 10px;
+    margin: 0 10px;
     font-size: 16px;
     cursor: pointer;
-}
-
-footer {
-    width: 100%; 
-    background-color: #124578ee;
-    height: 30px;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
-    font-weight: bold;
 }
 
 main {
@@ -75,7 +76,7 @@ main {
     max-width: 600px;
     margin: 100px 20px 0 20px;
     font-size: 28px;
-    line-height: 35px; 
+    line-height: 35px;
 }
 
 #title h1::after {
@@ -84,6 +85,8 @@ main {
     width: 15%;
     margin-top: 20px;
     border-bottom: 5px solid #e1c653;
+
+    animation: show-title-line 1.5s;
 }
 
 #card {
@@ -100,6 +103,8 @@ main {
     background-size: 25px 75px;
     background-position: 92% 0;
     background-repeat: no-repeat;
+
+    animation: show-bookmark 1s;
 }
 
 #card article {
@@ -127,11 +132,26 @@ main {
     cursor: pointer;
     padding: 5px;
     border: 1px solid #12457833;
+    transition: .5s ease-in-out;
+}
+
+#card article a:hover {
+    background-color: #e1c653;
 }
 
 #card #bookmark {
     position: absolute;
     right: 0;
+}
+
+footer {
+    width: 100%; 
+    background-color: #124578ee;
+    height: 30px;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 @media (min-width: 600px) {
