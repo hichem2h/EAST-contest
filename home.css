@@ -9,6 +9,11 @@
     100% {width: 15%;}
 }
 
+@keyframes show-nav-mobile {
+    from {left: -100%;}
+    to {left: 0;}
+}
+
 * {
     box-sizing: border-box;
 }
@@ -221,7 +226,8 @@ footer {
         width: 100%;
         background-color: #ffffffee;
         text-align: center;
-        padding-top: 70px 
+        padding-top: 70px;
+        animation: show-nav-mobile .6s;
     }
 
     nav a {
