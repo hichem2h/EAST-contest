@@ -2,17 +2,12 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
 body {
     color: white;
     font-family: 'PT Serif', serif;
     background-image: linear-gradient(#1e6ab8dd,#1e6ab8dd),
                       url("assets/homepage.jpg");
     
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch 
@@ -140,6 +135,10 @@ main {
 }
 
 @media (min-width: 600px) {
+    html, body {
+        height: 100%;
+    }
+
     #hamburger {
         display: none;
     }
